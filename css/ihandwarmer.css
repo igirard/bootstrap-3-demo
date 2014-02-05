@@ -16,10 +16,6 @@ body {
 	color: #FF8454;
 }
 
-.nav>li#btn_mission {
-	display: none;
-}
-
 .top {
 	background-attachment: fixed;
 	background-image: url("../img/nice_snow.png");
@@ -38,18 +34,17 @@ form {
 .features {
 	padding-bottom: 20px;
 	padding-top: 50px;
-}
-
-.feature h4, .feature p {
 	text-align: center;
 }
 
-.mission {
-	display: none;
+.feature p {
+	margin-bottom: 20px;
 }
 
-.bracket-border:before, .bracket-border:after {
-	display: none;
+.mission {
+	display: block;
+	padding-top: 30px;
+	padding-bottom: 60px
 }
 
 .mission img {
@@ -57,6 +52,10 @@ form {
 	margin: 0 auto;
 	margin-bottom: 60px;
 	width: 250px;
+}
+
+.bracket-border:before, .bracket-border:after {
+	display: none;
 }
 
 .footer {
@@ -94,17 +93,7 @@ i.glyphicon {
 }
 
 /* Media Query Overrides */
-@media (min-width: 768px) {
-	.mission {
-		display: block;
-		padding-top: 30px;
-		padding-bottom: 60px
-	}
-	.nav>li#btn_mission {
-		display: block;
-	}
-}
-	@media (min-width: 990px) {
+@media (min-width: 990px) {
 	.mission .bracket-border:before, .mission .bracket-border:after {
 		color: black;
 		content: "{";
@@ -115,13 +104,12 @@ i.glyphicon {
 		left: 120px;
 		-webkit-transform: rotate(84deg);
 	}
-}
-
-.mission .bracket-border:after {
-	position: absolute;
-	top: 185px;
-	left: 115px;
-	-webkit-transform: rotate(263deg);
+	.mission .bracket-border:after {
+		position: absolute;
+		top: 185px;
+		left: 115px;
+		-webkit-transform: rotate(263deg);
+	}
 }
 
 @media (min-width: 1200px) {
